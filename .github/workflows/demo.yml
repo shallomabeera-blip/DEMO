@@ -6,7 +6,7 @@ on:
   push:
 # triggers on push to a brunch
 
-    branches: [ main ]
+    branches: [main]
 # allows manual strigging of the workflow from the actions tab
   workflow_dispatch:
 # jobs to run
