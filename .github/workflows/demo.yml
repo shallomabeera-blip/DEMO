@@ -1,28 +1,21 @@
 # name of the  Workflow (appears in the actions tab)
-name:hello-world workflow
+name: hello-world workflow
 
-# events that trigger this workflow
 on:
+  # name of the event that triggers the workflow
   push:
-# triggers on push to a brunch
-
-    branches: [main]
-# allows manual strigging of the workflow from the actions tab
-  workflow_dispatch:
-# jobs to run
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
-#jobs ID or name
-greet:
-# type of runner to use
-
-# steps to execute in the job
+  # name of the job
+  greet:
+    # name of the runner
     runs-on: ubuntu-latest
-    # steps:
--name:say hello
-      run: echo "Hello World"
-runs-on: ubuntu-latest
     steps:
-      - name: say hello
+      # name of the step
+      - name: Print Hello World
+        # the action to run
         run: echo "Hello World"
   
     
